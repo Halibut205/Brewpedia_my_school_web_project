@@ -12,7 +12,9 @@
 
     .right-header {
         display: flex;
-
+        svg {
+            margin-left: 1rem;
+        }
         ul {
             padding: 0;
             font-size: 1.8rem;
