@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    padding: 1.6rem 16rem;
+
+    .right-header{
+        display: flex;
+        ul {
+            padding: 0;
+            font-size: 2rem;
+            font-weight: 700;
+            display: flex;
+            list-style: none;
+            li {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding: 1.6rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                &:hover {
+                    background: black;
+                    color: white;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+
+                i {
+                    font-size: 10px;
+                    &:hover{
+                        transform: rotateX(180deg);
+                    }
+                }
+                
+            }
+        }
+        
+    }
+}
