@@ -1,25 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
-* { 
-    /* * là tất cả các phần tử trong file .html */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%; 
-    /* font size được đưa về 1rem = 10px vì 16px*62.5% = 1 -> mặc định 1rem = 16px */
+    /*1rem = 16px => ff = 100%*/
+    font-size: 62.5%; /*1 rem = 10px*/
     font-family: 'Sen', sans-serif;
 }
 
-.comprehensive-kombucha{
+body {
+    font-size: 1.6rem; /*16px*/
+}
+
+.comprehensive {
     width: 100%;
     height: fit-content;
     display: flex;
     justify-content: center;
     padding: 1.1rem 0;
     border-bottom: 4px solid #f2f2f2;
-    background: url('../image/pattern/pattern-dashes.png') top center;
+    background: url('../image/pattern/pattern-dashes.png');
+    background-position: center;
     a {
         color: black;
         font-size: 1.8rem;
@@ -31,6 +36,3 @@ html {
         }
     }
 }
-
-
-
