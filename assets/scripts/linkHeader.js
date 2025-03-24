@@ -4,7 +4,7 @@ fetch("../views/templates/header.html")
         document.getElementById("header").innerHTML = data;
         const link = document.createElement("link");
         link.rel = "stylesheet";
-        link.href = "../css/templates/header.css";
+        link.href = "../css/template/header.css";
         document.head.appendChild(link);
     })
     .catch((error) => console.error("Lỗi load header:", error));
