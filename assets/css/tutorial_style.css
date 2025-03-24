@@ -18,7 +18,7 @@ html {
     justify-content: center;
     padding: 1.1rem 0;
     border-bottom: 4px solid #f2f2f2;
-    background: url('../image/pattern/pattern-dashes.png');
+    background: url('../images/pattern/pattern-dashes.png');
     background-position: center;
     a {
         color: black;
@@ -34,7 +34,6 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -69,13 +68,13 @@ p.entry-text {
     color: rgba(0, 0, 0, .5);
 }
 
-a {
+/* a {
     background-image: linear-gradient(transparent 60%, #F5C525 60%);
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-position: under;
     text-decoration-color: rgba(0, 0, 0, .5);
-}
+} */
 
 h1 {
     color: #000000;

@@ -23,7 +23,7 @@ body {
     justify-content: center;
     padding: 1.1rem 0;
     border-bottom: 4px solid #f2f2f2;
-    background: url('../image/pattern/pattern-dashes.png');
+    background: url('../images/pattern/pattern-dashes.png');
     background-position: center;
     a {
         color: black;

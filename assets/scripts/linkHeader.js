@@ -1,10 +1,10 @@
-fetch("../views/templates/header.html")
+fetch("../views/templates/header.html") // ?? thêm s làm gì ?
     .then((response) => response.text())
     .then((data) => {
         document.getElementById("header").innerHTML = data;
         const link = document.createElement("link");
         link.rel = "stylesheet";
-        link.href = "../css/templates/header.css";
+        link.href = "../css/template/header.css";
         document.head.appendChild(link);
     })
     .catch((error) => console.error("Lỗi load header:", error));
