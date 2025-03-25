@@ -78,6 +78,11 @@ a.highlight {
     text-decoration-thickness: 1px;
     text-underline-position: under;
     text-decoration-color: rgba(0, 0, 0, .5);
+    color: #333;
+}
+
+a.highlight:visited {
+    color: #333;
 }
 
 h1 {

@@ -21,6 +21,11 @@
         svg {
             margin-left: 1rem;
         }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
         ul {
             padding: 0;
             font-size: 1.8rem;
@@ -51,6 +56,10 @@
                 &:hover {
                     background: black;
                     color: white;
+                    
+                    a {
+                        color: white;
+                    }
 
                     i {
                         transform: rotateX(180deg);
@@ -61,6 +70,7 @@
                         background: white;
                         color: black;
                     }
+
                 }
 
                 ul {
@@ -93,6 +103,10 @@
                         &:hover {
                             background: white;
                             color: black;
+                            
+                            a {
+                                color: black;
+                            }
                         }
                     }
                 }
