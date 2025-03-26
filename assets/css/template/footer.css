@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Avenir:wght@400;700&display=swap');
+
+
 .footer{
     background-color: #f2f2f2;
     position: sticky;
@@ -45,13 +48,13 @@
     }
 
     .right-footer {
+        margin-left: auto;
         display: flex;
-        gap: 1.6rem;
+        gap: 3rem;
 
         ul {
             list-style: none;
             padding-left: 0;
-
             li {
                 display: list-item;
                 &:first-child {
@@ -72,5 +75,22 @@
                 }
             }
         }
+    }
+}
+
+.info {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 1.1rem 0;
+    background: url('../../images/pattern/pattern-dashes.png');
+    background-position: center;
+    position: absolute;
+    h6 {
+        font-family: 'Avenir', sans-serif;
+        font-size: small;
+        font-weight: 100;
+        text-align: center;
     }
 }
