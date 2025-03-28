@@ -15,19 +15,24 @@
     border-top: 1px solid #E0E0E0;
 
     .left-footer {
+        /* border:1px solid black; */
+        position: sticky;
+        /* display: flex; */
         padding-top: 0;
-        display: sticky;
         top: 0;
-        flex-direction: column;
+        /* flex-direction: column; */
 
             .website-logo {
+                /* border:1px solid black; */
                 max-width: none;
                 height: auto;
                 object-fit: cover;
+                width: 260px;
             }
 
             .social {
-                width: 10;
+                /* border:1px solid black; */
+                width: inherit;
                 height: auto;
                 display: flex;
                 justify-content: center;
@@ -55,13 +60,15 @@
         ul {
             list-style: none;
             padding-left: 0;
+            font-size: 1.4rem;
             li {
+                margin: 1.4rem;
                 display: list-item;
                 &:first-child {
                     font-weight: bold;
+                    font-size: 1.6rem;
                 }
                 &:not(:first-child) {
-                    font-size: 1.4rem;
                     
                     a:hover {
                         text-decoration: underline;
