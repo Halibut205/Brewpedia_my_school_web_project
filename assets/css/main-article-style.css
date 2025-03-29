@@ -175,3 +175,7 @@ figure.img-2{
     font-size: 18px;
     padding: 8px;
 }
+.title-center{
+    display: flex;
+    justify-content: center;
+}
