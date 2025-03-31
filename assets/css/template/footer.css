@@ -101,3 +101,7 @@
         text-align: center;
     }
 }
+.container-footer{
+    display: flex;
+    width: 100%;
+}
