@@ -155,27 +155,3 @@ ol.counter li::before {
     margin-bottom: 20px;
     font-size: 21px;
 }
-.figure-img-2{
-    display: flex;
-}
-figure.img-2{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.img-square{
-    height: 360px;
-    width: 360px;
-}
-.img-cap{
-    text-align: center;
-    background-color: #f2f2f2;
-    width: 360px;
-    font-size: 18px;
-    padding: 8px;
-}
-.title-center{
-    display: flex;
-    justify-content: center;
-}
