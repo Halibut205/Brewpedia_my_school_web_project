@@ -28,6 +28,22 @@ body {
     padding: 40px;
 }
 
+/* Tablet devices */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+}
+/* 2 lề tự nhỏ khi màn điện thoại*/
 p {
     font-size: 21px;
     line-height: 33.6px;
