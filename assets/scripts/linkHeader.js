@@ -18,3 +18,9 @@ fetch("../views/templates/header.html") // ?? thêm s làm gì ?
             header.classList.remove('sticky');
         }
     });
+
+    function toggleMenu() {
+        const rightHeader = document.querySelector('.right-header');
+        rightHeader.classList.toggle('active');
+    }
+    
