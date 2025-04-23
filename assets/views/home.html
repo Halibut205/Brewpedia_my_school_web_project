@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrewPedia: Làm Kombucha Tại Nhà Dễ Dàng</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <script src="../scripts/mainPage.js"></script>
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="icon" href="../images/webicon/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -14,15 +15,37 @@
 </head>
 
 <body>
+
+    <div id="preloader"></div>
+    <style>
+        #preloader{
+        background: #FFF;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        }
+    </style>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            setTimeout(function(){
+                loader.style.opacity = 0;
+                loader.style.transition = "opacity 1s ease";
+                setTimeout(function(){
+                    loader.style.display = "none";
+                }, 1000);
+            }, 150);
+        })
+    </script> 
+    <!-- load trang web -->
+
     <div id="header"></div>
     <script src="../scripts/linkHeader.js"></script>
 
-    <div class="content">
-        <div class="quick-link">
-            <p>fuck</p>
-        </div>
-    </div>
-
+    <section></section>
 
     <div id="footer"></div>
     <script src="../scripts/linkFooter.js"></script>

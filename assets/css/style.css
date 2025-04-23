@@ -15,7 +15,7 @@ body {
     font-size: 1.6rem;
 }
 
-.comprehensive {
+/* .comprehensive {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -34,5 +34,5 @@ body {
             text-decoration: underline;
         }
     }
-}
+} */
 
