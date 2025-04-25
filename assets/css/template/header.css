@@ -157,7 +157,7 @@
 
 
 /* Responsive Header */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .header {
         padding: 1px 2px;
         flex-direction: column;
@@ -207,7 +207,7 @@
 
             ul {
                 flex-direction: column;
-
+                
                 li {
                     width: 100%;
                     padding: 10px;
@@ -227,10 +227,12 @@
                             padding-left: 2rem;
                         }
                     }
-                    
-                    &.active ul {
-                        display: flex;
-                    }
+                                      
+                }
+                li.open > ul {
+                    display: flex !important;
+                    flex-direction: column;
+                    background: #fff;
                 }
             }
         }
