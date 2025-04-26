@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrewPedia: Giới thiệu</title>
+    <title>BrewPedia: Đăng nhập</title>
     <link rel="stylesheet" href="../css/template/login.css">
     <link rel="stylesheet" href="../css/main-article-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -44,11 +44,12 @@
             <form>
                 <div>
                     <input type="text" class="form-control" placeholder="Email">
-                    <small class="text-secondary"></small>
+                    <small class="text-secondary error"></small>
+                    <div class="error"></div>
                 </div>
                 <div>
                     <input type="password" class="form-control" placeholder="Mật khẩu">
-                    <small class="text-secondary"></small>
+                    <small class="text-secondary error"></small>
                 </div>
                 <button type="submit" class="btn">Đăng nhập</button><br>
             </form><br>
@@ -64,5 +65,53 @@
     </div>
     <div id="footer"></div>
     <script src="../scripts/linkFooter.js"></script>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event){
+            event.preventDefault();
+            validateInput();
+        });
+        function validateInput(){
+            const emailField = document.querySelector('input[placeholder="Email"]');
+            const passwordField = document.querySelector('input[placeholder="Mật khẩu"]');
+            const email = emailField.value.trim();
+            const password = passwordField.value.trim();
+            let isValid = true; 
+            const emailValidate = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+            setSuccess(emailField);
+            setSuccess(passwordField);
+            if(email === ''){
+                isValid = false;
+                setError(emailField,'Email không được để trống!');
+            }
+            else if(!emailValidate.test(email)){
+                isValid = false
+                setError(emailField, 'Email không hợp lệ!');
+            }
+            else{
+                if(password === ''){
+                    isValid = false;
+                    setError(passwordField,'Mật khẩu không được để trống!');
+                }
+                else if(password.length < 6){
+                    setError(passwordField, 'Mật khẩu không đúng!');
+                }
+            }
+            if(isValid){
+                setTimeout(function(){
+                    window.location.href = 'home.html'
+                },1000)
+            }
+        }
+        function setError(element, message){
+            const parent = element.parentElement;
+            const errorDisplay = parent.querySelector('.error');
+            errorDisplay.innerHTML = message;
+        }
+        function setSuccess(element){
+            const parent = element.parentElement;
+            const errorDisplay = parent.querySelector('.error');
+            errorDisplay.innerHTML = '';
+        }
+    </script>
 </body>
 </html>

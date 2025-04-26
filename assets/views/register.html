@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrewPedia: Giới thiệu</title>
+    <title>BrewPedia: Đăng kí</title>
     <link rel="stylesheet" href="../css/template/register.css">
     <link rel="stylesheet" href="../css/main-article-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -86,8 +86,10 @@
             const password = passwordField.value.trim();
             const rePassword = rePasswordField.value.trim()
             let isValid = true
-            const emailValidate = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+            const emailValidate = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+            setSuccess(emailField);
+            setSuccess(passwordField);
+            setSuccess(rePasswordField)
             if(email === ''){
                 setError(emailField,"Vui lòng nhập email!");
                 isValid = false;
@@ -95,9 +97,6 @@
             else if (!emailValidate.test(email)){
                 setError(emailField,"Email không hợp lệ!");
                 isValid = false;
-            }
-            else{
-                setSuccess(emailField);
             }
             if(password === ''){
                 setError(passwordField,"Vui lòng nhập mật khẩu!");
@@ -107,9 +106,6 @@
                 setError(passwordField,"Mật khẩu phải chứa ít nhất 6 kí tự!");
                 isValid = false;
             }
-            else{
-                setSuccess(passwordField);
-            }
             if(rePassword === ''){
                 setError(rePasswordField,"Vui lòng nhập lại mật khẩu!");
                 isValid = false;
@@ -117,9 +113,6 @@
             else if (rePassword !== password){
                 setError(rePasswordField,"Mật khẩu nhập lại không khớp!");
                 isValid = false;
-            }
-            else{
-                setSuccess(rePasswordField);
             }
             if(isValid){
                 success.innerHTML = 'Tạo tài khoản thành công!';
