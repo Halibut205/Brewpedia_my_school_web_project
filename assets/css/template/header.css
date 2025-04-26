@@ -4,40 +4,43 @@
     height: fit-content;
     display: flex;
     justify-content: center;
-    padding: 1.1rem 0;
+    padding: 11px 0;
     border-bottom: 4px solid #f2f2f2;
     background: url('../../images/pattern/pattern-dashes.png');
     background-position: center;
-    a {
-        color: black;
-        font-size: 1.8rem;
-        text-decoration: none;
-        font-weight: 700;
-        transition: color 0.3s;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
 }
-.header-placeholder{
+
+.comprehensive a {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.comprehensive a:hover {
+    text-decoration: underline;
+}
+
+.header-placeholder {
     display: none;
     width: 100%;
     height: 0;
 }
-.header-placeholder.active{
+
+.header-placeholder.active {
     display: block;
 }
-.header.fixed{
+
+.header.fixed {
     position: fixed;
     width: 100%;
-    /* margin-top: 53px; */
 }
-.header {
 
-    z-index: 100;
+.header {
+    z-index: 10;
     background-color: #f2f2f2;
     top: 0;
-    /* left: 0; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,209 +48,201 @@
     height: fit-content;
     padding: 1rem 16rem;
     border-bottom: 1px solid #E0E0E0;
+}
 
-    .website-logo {
-        max-width: none;
-        height: auto;
-        object-fit: cover;
-        margin: 0 10px;
-    }
+.header .website-logo {
+    max-width: none;
+    height: auto;
+    object-fit: cover;
+    margin: 0 10px;
+}
 
-    .right-header {
-        display: flex;
+.header .right-header {
+    display: flex;
+}
 
-        svg {
-            margin-left: 1rem;
-        }
+.header .right-header a {
+    color: #333;
+    text-decoration: none;
+}
 
-        a { /* Bỏ màu tím mặc định, gạch dưới */
-            color: #333;
-            text-decoration: none;
-        }
+.header .right-header ul {
+    padding: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    list-style: none;
+}
 
-        ul {
-            padding: 0;
-            font-size: 1.8rem;
-            font-weight: 700;
-            display: flex;
-            list-style: none;
+.header .right-header ul li {
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.6rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
 
-            li {
-                height: fit-content;
-                position: relative;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                padding: 1.6rem;
-                cursor: pointer;
-                transition: background 0.3s ease, color 0.3s ease;
+.header .right-header ul li span {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
 
-                span {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.8rem;
-                }
+.header .right-header ul li i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
 
-                i {
-                    font-size: 1rem;
-                    transition: transform 0.3s ease;
-                }
+.header .right-header ul li:hover {
+    background: black;
+    color: white;
+}
 
-                &:hover {
-                    background: black;
-                    color: white;
-                    
-                    a { /* mặc định màu trắng */
-                        color: white;
-                    }
+.header .right-header ul li:hover a {
+    color: white;
+}
 
-                    i {
-                        transform: rotate(180deg);
-                    }
+.header .right-header ul li:hover i {
+    transform: rotate(180deg);
+}
 
-                    ul {
-                        opacity: 1;
-                        visibility: visible;
-                        transform: translateY(0);
-                        pointer-events: auto;
-                        /* Hiện menu con khi hover vào <li> cha */
-                        display: flex;
-                        background: white;
-                        color: black;
-                    }
+.header .right-header ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    display: flex;
+    background: white;
+    color: black;
+}
 
-                }
+.header .right-header ul li ul {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-shadow: 0px 2px 8px rgba(33, 33, 33, .12);
+    top: 100%;
+    left: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
 
-                ul {
-                    width: inherit;
-                    /* Kế thừa chiều rộng từ <li> cha */
-                    display: flex;
-                    /* Ẩn menu con mặc định */
-                    flex-direction: column;
-                    /* Hiển thị theo cột */
-                    position: absolute;
-                    /* Định vị tuyệt đối */
-                    box-shadow: 0px 2px 8px rgba(33, 33, 33, .12);
-                    /* Đổ bóng */
-                    top: 100%;
-                    /* Hiển thị ngay bên dưới <li> cha */
-                    left: 0;
-                    border-radius: 4px;
-                    overflow: hidden;
-                    opacity: 0;
-                    visibility: hidden;
-                    transform: translateY(-10px);
-                    pointer-events: none;
-                    transition: all 0.3s ease;
+.header .right-header ul li ul li {
+    width: 200px;
+    text-align: left;
+    padding-left: 1.6rem;
+    align-items: flex-start;
+    border-bottom: 1px solid #cdcdcd;
+}
 
-                    /* Căn trái để thẳng hàng với <li> cha */
-                    li {
-                        width: 200px;
-                        /* Đặt chiều rộng cố định cho <li> con */
-                        text-align: left;
-                        /* Căn text sang trái */
-                        padding-left: 1.6rem;
-                        /* Thêm khoảng cách bên trái để text thẳng hàng */
-                        align-items: flex-start;
-                        /* Đảm bảo nội dung căn trái */
-                        border-bottom: 1px solid #cdcdcd; 
+.header .right-header ul li ul li:hover {
+    background: white;
+    color: black;
+}
 
-                        &:hover {
-                            background: white;
-                            color: black;
-                            
-                            a { /* niggerify cái thanh đó */
-                                color: black;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+.header .right-header ul li ul li:hover a {
+    color: black;
+}
+
+.search-icon {
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
 }
 
 
-/* Responsive Header */
 @media (max-width: 1000px) {
     .header {
-        padding: 1px 2px;
+        /* padding: 1px 2px; */
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
+    }
 
-        .left-header {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    .header .left-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-            .menu-toggle {
-                margin: 30px;
-                display: block;
-                font-size: 2.5rem;
-                cursor: pointer;
-                transition: transform 0.3s ease;
+    .header .left-header .menu-toggle {
+        margin: 30px;
+        display: block;
+        font-size: 2.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
 
-                &.active {
-                    transform: rotate(90deg);
-                }
-            }
-        }
+    .header .left-header .menu-toggle.active {
+        transform: rotate(90deg);
+    }
 
-        .website-logo {
-            max-width: none;
-            height: auto;
-            object-fit: cover;
-            margin: 0 20px 0 0;
-        }
+    .header .website-logo {
+        max-width: none;
+        height: auto;
+        object-fit: cover;
+        margin: 0 20px 0 0;
+    }
 
-        .right-header {
-            width: 100%;
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-            margin-top: 1rem;
-            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-            max-height: 0;
-            opacity: 0;
+    .header .right-header {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        margin-top: 1rem;
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        max-height: 0;
+        opacity: 0;
+    }
 
-            &.active {
-                display: flex;
-                opacity: 1;
-                max-height: 1000px;
-            }
+    .header .right-header.active {
+        display: flex;
+        opacity: 1;
+        max-height: 1000px;
+    }
 
-            ul {
-                flex-direction: column;
-                
-                li {
-                    width: 100%;
-                    padding: 10px;
+    .header .right-header ul {
+        flex-direction: column;
+    }
 
-                    ul {
-                        position: static;
-                        box-shadow: none;
-                        background: transparent;
-                        margin-top: 10px;
-                        opacity: 1;
-                        visibility: visible;
-                        transform: none;
-                        display: none; 
+    .header .right-header ul li {
+        width: 100%;
+        padding: 10px;
+    }
 
-                        li {
-                            border: none;
-                            padding-left: 2rem;
-                        }
-                    }
-                                      
-                }
-                li.open > ul {
-                    display: flex !important;
-                    flex-direction: column;
-                    background: #fff;
-                }
-            }
-        }
+    .header .right-header ul li ul {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        margin-top: 10px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+    }
+
+    .header .right-header ul li ul li {
+        border: none;
+        padding-left: 2rem;
+    }
+
+    .header .right-header ul li.open > ul {
+        display: flex !important;
+        flex-direction: column;
+        background: #fff;
     }
 }
 
