@@ -6,22 +6,30 @@ fetch("../views/templates/header.html") // ?? thêm s làm gì ?
         link.rel = "stylesheet";
         link.href = "../css/template/header.css";
         document.head.appendChild(link);
+        const comprehensive = document.querySelector('.comprehensive');
+        const header = document.querySelector('.header');
+        const placeholder = document.querySelector('.header-placeholder');
+        
+        window.addEventListener('scroll', function() {
+          const comprehensiveHeight = comprehensive.offsetHeight;
+          if (window.scrollY >= comprehensiveHeight) {
+            if (!header.classList.contains('fixed')) {
+              header.classList.add('fixed');
+              placeholder.style.height = header.offsetHeight + 'px';
+              placeholder.style.display = 'block';
+            }
+          } else {
+            if (header.classList.contains('fixed')) {
+              header.classList.remove('fixed');
+              placeholder.style.display = 'none';
+            }
+          }
+        });
     })
     .catch((error) => console.error("Lỗi load header:", error));
     
     
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('.header');
-        const x = document.querySelector('.header-placeholder');
 
-        if (window.scrollY > 53) {
-            header.classList.add('sticky');
-            x.classList.add('active')
-        } else {
-            header.classList.remove('sticky');
-            x.classList.remove('active')
-        }
-    });
 
     function toggleMenu() {
         const rightHeader = document.querySelector('.right-header');

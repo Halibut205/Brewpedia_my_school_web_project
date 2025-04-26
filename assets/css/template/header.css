@@ -20,14 +20,16 @@
     }
 }
 .header-placeholder{
-    width: 55px;
     display: none;
+    width: 100%;
+    height: 0;
 }
 .header-placeholder.active{
     display: block;
 }
-.header.sticky{
+.header.fixed{
     position: fixed;
+    width: 100%;
     /* margin-top: 53px; */
 }
 .header {
