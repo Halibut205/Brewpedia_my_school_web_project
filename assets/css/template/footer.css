@@ -126,3 +126,46 @@ html {
 
 }
 
+@media screen and (max-width: 1000px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .left-footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        .social {
+            margin-top: 1rem;
+        }
+    }
+
+    .right-footer {
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(120px, 1fr)); /* wtf */
+        gap: 2rem;
+        justify-content: center; 
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    .right-footer ul {
+        padding-left: 0;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        position: relative;
+    }
+}
+

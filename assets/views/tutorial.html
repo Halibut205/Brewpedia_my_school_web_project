@@ -14,31 +14,33 @@
 </head>
 
 <body>
-    <div id="preloader"></div>
-    <style>
-        #preloader{
-        background: #FFF;
-        height: 100vh;
-        width: 100vw;
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        left: 0;
-        }
-    </style>
-    <script>
-        var loader = document.getElementById("preloader");
-        window.addEventListener("load", function(){
-            setTimeout(function(){
-                loader.style.opacity = 0;
-                loader.style.transition = "opacity 1s ease";
-                setTimeout(function(){
-                    loader.style.display = "none";
-                }, 1000);
-            }, 150);
-        })
-    </script> 
-    <!-- load trang web -->
+
+       <!-- load trang web -->
+       <div id="preloader"></div>
+       <style>
+           #preloader{
+           background: #FFF;
+           height: 100vh;
+           width: 100vw;
+           position: fixed;
+           z-index: 1000;
+           top: 0;
+           left: 0;
+           }
+       </style>
+       <script>
+           var loader = document.getElementById("preloader");
+           window.addEventListener("load", function(){
+               setTimeout(function(){
+                   loader.style.opacity = 0;
+                   loader.style.transition = "opacity 1s ease";
+                   setTimeout(function(){
+                       loader.style.display = "none";
+                   }, 1000);
+               }, 150);
+           })
+       </script> 
+       <!-- load trang web -->
 
     <div id="header"></div>
     <script src="../scripts/linkHeader.js"></script>
