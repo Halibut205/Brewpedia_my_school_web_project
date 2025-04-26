@@ -108,7 +108,6 @@ body {
 .menu1 ul{
     /* border: 1px solid #000; */
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     list-style-type: none;
     gap: 16px;
@@ -324,3 +323,139 @@ body {
     border: none;
     background-color: #000;
 }
+
+.menu3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.row1{
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+}
+.row2{
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+}
+
+.menu3-item{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu3-item img {
+    width: 100%;
+    height: auto;
+}
+
+.menu3-item h2{
+    text-align: center;
+}
+
+.menu3-item figure h2{
+    text-align: center ;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #FFF;
+    margin-top: -9%;
+}
+
+.menu3-item span {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu3-item span i {
+    font-size: 16px;
+    color: #555;
+    position: relative;
+    bottom: 0;
+}
+
+.menu3-item span p {
+    font-size: 20px;
+    color: #555;
+}
+
+
+.subscribe-section {
+    background-image: url('../images/pattern/pattern-dashes.png');
+    color: #000;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 40px auto;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subscribe-section p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 20px); /* Chia đều 2 ô nhập liệu */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #f99b10;
+    box-shadow: 0 0 5px rgba(249, 155, 16, 0.5);
+}
+
+.subscribe-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #000;
+}
+
