@@ -178,7 +178,7 @@
         align-items: center;
     }
 
-    .header .left-header .menu-toggle {
+    .header .menu-toggle {
         margin: 30px;
         display: block;
         font-size: 2.5rem;
@@ -186,7 +186,7 @@
         transition: transform 0.3s ease;
     }
 
-    .header .left-header .menu-toggle.active {
+    .header .menu-toggle.active {
         transform: rotate(90deg);
     }
 

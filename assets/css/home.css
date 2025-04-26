@@ -124,7 +124,7 @@ body {
 .menu1 span{
     /* border: 1px solid #000; */
     position: absolute;
-    z-index: 10;
+    z-index: 2;
     background-color: #FFF;
     padding: 8px 12px;
     font-weight: 700;
@@ -251,7 +251,7 @@ body {
 .menu2-card li span {
     /* border: 1px solid #000; */
     position: absolute;
-    z-index: 10;
+    z-index: 2;
     background-color: #FFF;
     padding: 4px 6px;
     font-weight: 700;
