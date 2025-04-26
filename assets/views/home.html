@@ -47,6 +47,31 @@
 
     <div id="header"></div>
     <script src="../scripts/linkHeader.js"></script>
+    
+    <div class="banner" id="banner">
+        <img src="../images/home/Made-it-easy.png" alt="banner">
+        <div class="banner-text">
+            <img src="../images/home/Made-it-easy-text.png" alt="">
+            <p>Chúng mình là một nhóm các bạn trẻ đam mê pha chế tại nhà và đã giúp hàng trăm người tự tay làm kombucha ngay trong căn bếp của mình!</p>
+        <button>
+            <a href="https://www.facebook.com/groups/2103347326600975">Tham gia cùng chúng mình!</a>
+        </button>
+        </div>
+    </div>
+
+    <script>
+        var banner =document.getElementById("banner");
+        window.addEventListener("load", function() {
+            const banner = document.querySelector(".banner");
+            if (banner) {
+                banner.scrollIntoView({
+                    behavior: "auto",
+                    block: "start"
+                });
+            }
+        });
+    </script>
+
 
     <div class="main-content">
         
@@ -86,7 +111,7 @@
             <div class="introduction-paragraph">
                 <p class="head-paragraph">Hãy cùng ngâm Kombucha nhé!</p>
                 <p>Chúng mình là một nhóm các bạn trẻ đam mê pha chế tại nhà và đã giúp hàng trăm người tự tay làm kombucha ngay trong căn bếp của mình!</p>
-                <p>Tình yêu với kombucha của tụi mình cũng bắt đầu y chang bao người khác – nghiện mấy chai kombucha bán sẵn đến mức móc hầu bao không suy nghĩ. Cho đến một ngày đẹp trời, tụi mình lạc vào thế giới kombucha tự làm: sủi bọt vui tai, ngon mê ly, giá lại rẻ bèo! Kể từ đó, nói không với kombucha đóng chai luôn!</p>
+                <p>Tình yêu với kombucha của tụi mình cũng bắt đầu y chang bao người khác – nghiện mấy chai kombucha bán sẵn đến mức móc hầu bao không suy nghĩ. Cho đến một ngày đẹp trời, tụi mình lạc vào thế giới kombucha tự làm. Kể từ đó, tụi mình nói không với kombucha đóng chai luôn!</p>
                 <button>
                     <a href="https://www.facebook.com/groups/2103347326600975">Tham gia cùng chúng mình!</a>
                 </button>
@@ -102,10 +127,12 @@
                     </a>
                 </div>
             </div>
+
+
         </div>
 
         <div class="menu2">
-            <p class="menu2-head-paragraph">Tìm hương vị yêu thích</p>
+            <h1 class="menu2-head-paragraph">Tìm hương vị yêu thích</h1>
 
             <div class="menu2-card">
                 <ul>
@@ -119,22 +146,32 @@
                     </li>
                     <li>
                         <span>Hương thảo mộc</span>
-                        <img src="../images/home/homemade-multi-green-kombucha-featured-480x480.jpg" alt="Hương trái cây">
+                        <img src="../images/home/homemade-multi-green-kombucha-featured-480x480.jpg" alt="Hương thảo mộc">
                     </li>
                     <li>
                         <span>Hương hoa</span>
-                        <img src="../images/home/elderflower-kombucha-featured-320x320.jpg" alt="Hương trái cây">
+                        <img src="../images/home/elderflower-kombucha-featured-320x320.jpg" alt="Hương hoa">
                     </li>
                     <li>
                         <span>Hương vị mùa nóng</span>
-                        <img src="../images/home/kombucha-shandy-recipe-3-378x378.jpg" alt="Hương trái cây">
+                        <img src="../images/home/kombucha-shandy-recipe-3-378x378.jpg" alt="Hương vị mùa nóng">
                     </li>
                     <li>
                         <span>Hương vị mùa lạnh</span>
-                        <img src="../images/home/gluhwein-kombucha-featured-320x320.jpg" alt="Hương trái cây">
+                        <img src="../images/home/gluhwein-kombucha-featured-320x320.jpg" alt="Hương vị mùa lạnh">
                     </li>
                 </ul>
             </div>
+        </div>
+
+        <div class="what-is-kombucha">
+            <h1>Kombucha là gì ?</h1>
+            <p>Kombucha là một loại đồ uống lên men có ga, giàu probiotics tốt cho đường ruột, được làm từ trà lên men. Tự nấu kombucha tại nhà không chỉ giúp tiết kiệm chi phí mà còn cho phép bạn tự tạo ra những hương vị kết hợp độc đáo theo ý thích. Và điều tuyệt nhất? Thực ra việc làm kombucha dễ hơn nhiều so với vẻ bề ngoài.</p>
+        </div>
+
+        <div class="top-flavors">
+            <h1>TOP 10 HƯƠNG VỊ</h1>
+            <hr>
         </div>
 
     </div>
