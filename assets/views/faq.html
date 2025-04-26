@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewPedia: FAQs</title>
+    <script src="../scripts/mainPage.js"></script>
+    <link rel="stylesheet" href="../css/faq.css">
+    <link rel="icon" href="../images/webicon/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+</head>
+<body>
+    <!-- load trang web -->
+    <div id="preloader"></div>
+    <style>
+        #preloader{
+        background: #FFF;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        }
+    </style>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            setTimeout(function(){
+                loader.style.opacity = 0;
+                loader.style.transition = "opacity 1s ease";
+                setTimeout(function(){
+                    loader.style.display = "none";
+                }, 1000);
+            }, 150);
+        })
+    </script> 
+    <!-- load trang web -->
+    <div id="header"></div>
+    <script src="../scripts/linkHeader.js"></script>
+
+    <section class="faq-section">
+        <nav><a href="./home.html" class="home-link">home</a></nav>
+        <h1>FAQ</h1>
+        <p>
+            Bạn có câu hỏi gì trong quá trình ủ kombucha? Dưới đây là những câu hỏi được hỏi thường xuyên nhất về làm kombucha tại nhà! Không có câu hỏi nào là thừa ở đây cả!
+        </p>
+    </section>
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <img src="../images/faq/img1.jpg" alt="img1">
+                <h3>Kombucha chính xác là gì nhỉ?</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img2.jpg" alt="img2">
+                <h3>Kombucha có phải một loại rượu không</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img3.jpg" alt="img3">
+                <h3>Trẻ em có uống được kombucha không?</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img4.jpg" alt="img4">
+                <h3>Liệu kombucha có thực sự tốt cho hệ đường ruột?</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img5.jpg" alt="img5">
+                <h3>SCOBY là gì và tôi có thể mua ở đâu</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img6.jpg" alt="img6">
+                <h3>Thời gian ủ kombucha mất bao lâu?</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img7.jpg" alt="img7">
+                <h3>Có thể dùng trà có vị được không?</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img8.jpg" alt="img8">
+                <h3>Nhiệt độ lý tưởng để ủ kombucha là?</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img9.jpg" alt="img9">
+                <h3>Làm sao để biết kombucha đã hoàn thành</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img10.jpg" alt="img10">
+                <h3>Để ủ kombucha tôi nên dùng loại trà nào</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img11.jpg" alt="img11">
+                <h3>Tôi có thể dùng mật ong hoặc chất tạo ngọt thay cho đường được không?</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img12.jpg" alt="img12">
+                <h3>Loại nước nào phù hợp nhất để ủ kombucha?</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img13.jpg" alt="img13">
+                <h3>Tôi có nên dùng nguyên liệu hữu cơ không?</h3>
+            </div>
+        
+            <div class="card">
+                <img src="../images/faq/img14.jpg" alt="img14">
+                <h3>Tôi có thể cho hoa quả hoặc hương liệu vào trong quá trình ủ không?</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img15.jpg" alt="img15">
+                <h3>Tạo hương vị cho kombucha</h3>
+            </div>
+            <div class="card">
+                <img src="../images/faq/img16.jpg" alt="img16">
+                <h3>Tại sao phải ủ lần thứ hai? và có cần thiết không?</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="../scripts/linkFooter.js"></script>
+</body>
+</html>

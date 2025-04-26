@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Sen', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    
+}
+
+.faq-section {
+    background: url("../images/faq/pattern-bottles.png") repeat;
+    background-size: 300px 300px;
+    min-height: 100px;
+    padding: 20px 100px ;
+    position: relative;
+}
+
+nav .home-link {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;   
+}
+
+h1 {
+    font-size: 48px;
+    margin: 20px 0 10px;
+}
+
+p {
+    font-size: 24px;
+    max-width: 1000px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+}
+
+.card img {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.card h3 {
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
