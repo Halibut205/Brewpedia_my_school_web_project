@@ -138,7 +138,7 @@
                         /* Thêm khoảng cách bên trái để text thẳng hàng */
                         align-items: flex-start;
                         /* Đảm bảo nội dung căn trái */
-                        border-bottom: 1px solid #cdcdcd;
+                        border-bottom: 1px solid #cdcdcd; 
 
                         &:hover {
                             background: white;
@@ -155,8 +155,9 @@
     }
 }
 
+
 /* Responsive Header */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .header {
         padding: 1px 2px;
         flex-direction: column;
@@ -206,7 +207,7 @@
 
             ul {
                 flex-direction: column;
-
+                
                 li {
                     width: 100%;
                     padding: 10px;
@@ -219,17 +220,19 @@
                         opacity: 1;
                         visibility: visible;
                         transform: none;
-                        display: none;
+                        display: none; 
 
                         li {
                             border: none;
                             padding-left: 2rem;
                         }
                     }
-
-                    &.active ul {
-                        display: flex;
-                    }
+                                      
+                }
+                li.open > ul {
+                    display: flex !important;
+                    flex-direction: column;
+                    background: #fff;
                 }
             }
         }
