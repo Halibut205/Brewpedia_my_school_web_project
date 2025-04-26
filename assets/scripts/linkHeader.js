@@ -12,10 +12,14 @@ fetch("../views/templates/header.html") // ?? thêm s làm gì ?
     
     window.addEventListener('scroll', function() {
         const header = document.querySelector('.header');
+        const x = document.querySelector('.header-placeholder');
+
         if (window.scrollY > 53) {
             header.classList.add('sticky');
+            x.classList.add('active')
         } else {
             header.classList.remove('sticky');
+            x.classList.remove('active')
         }
     });
 

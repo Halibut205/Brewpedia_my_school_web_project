@@ -1,5 +1,5 @@
 .comprehensive {
-    position: sticky;
+    position: relative;
     width: 100%;
     height: fit-content;
     display: flex;
@@ -19,9 +19,19 @@
         }
     }
 }
-
+.header-placeholder{
+    width: 55px;
+    display: none;
+}
+.header-placeholder.active{
+    display: block;
+}
+.header.sticky{
+    position: fixed;
+    /* margin-top: 53px; */
+}
 .header {
-    position: sticky;
+
     z-index: 100;
     background-color: #f2f2f2;
     top: 0;
