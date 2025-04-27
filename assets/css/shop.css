@@ -89,7 +89,7 @@ body{
     bottom: 10px;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease, background-color 1s ease;
     align-content: center;
 }
 .addToCart.active{

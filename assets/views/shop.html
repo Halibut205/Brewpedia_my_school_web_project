@@ -279,11 +279,23 @@
         wrappers[i].addEventListener('mouseenter', function () {
             var btn = this.querySelector('.addToCart');
             btn.classList.add('active');
+
         });
         wrappers[i].addEventListener('mouseleave', function () {
             var btn = this.querySelector('.addToCart');
             btn.classList.remove('active');
         });
+
+        var btn = wrappers[i].querySelector('.addToCart');
+        if(btn) {
+            btn.addEventListener('click', function(event){
+                event.stopPropagation();
+                this.innerHTML = 'Đã thêm!';
+                this.style.backgroundColor = 'green';
+                this.style.border = '1px solid green'
+            });
+        }
+
     }
     </script>
     
