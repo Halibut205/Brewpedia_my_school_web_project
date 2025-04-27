@@ -293,6 +293,11 @@
                 this.innerHTML = 'Đã thêm!';
                 this.style.backgroundColor = 'green';
                 this.style.border = '1px solid green'
+                var self = this
+                setTimeout(
+                    function(){
+                        self.classList.remove('active');
+                    },1000)
             });
         }
 
