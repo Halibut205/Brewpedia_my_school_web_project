@@ -87,14 +87,13 @@
                 isValid = false
                 setError(emailField, 'Email không hợp lệ!');
             }
-            else{
-                if(password === ''){
+            if(password === ''){
                     isValid = false;
                     setError(passwordField,'Mật khẩu không được để trống!');
                 }
                 else if(password.length < 6){
-                    setError(passwordField, 'Mật khẩu không đúng!');
-                }
+                    setError(passwordField, 'Mật khẩu không hợp lệ!');
+                    isValid = false;
             }
             if(isValid){
                 setTimeout(function(){
