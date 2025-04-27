@@ -52,7 +52,7 @@
     height: fit-content;
     padding: 1rem 16rem;
     border-bottom: 1px solid #E0E0E0;
-    z-index: 1000;
+    z-index: 30;
 }
 
 .header .website-logo {
@@ -168,6 +168,81 @@
     align-items: center;
     margin-right: 20px;
     cursor: pointer;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open{
+    opacity: 1;
+    z-index: 50;
+}
+
+.modal-inner {
+    background-color: #fff;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-links a{
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-links a:hover{
+    color: #f99b10;
+    font-size: 14px;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #555;
 }
 
 
