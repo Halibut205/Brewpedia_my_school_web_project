@@ -5,6 +5,7 @@ body{
 .guides {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .guides .guide {
@@ -32,16 +33,32 @@ body{
 
 .title-center {
     justify-content: center;
+    word-break: break-word; 
+    overflow-wrap: break-word;
+    line-height: 1.2;
+    font-size: 40px;
+    text-align: center;
 }
 
 .title-left {
     justify-content: left;
+    word-break: break-word; 
+    overflow-wrap: break-word;
+    line-height: 1.2;
+    font-size: 35px;
+
 }
 
 .products {
     display: flex;
     flex-wrap: wrap;
     
+}
+.products .product {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }
 .products .product:hover{
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
@@ -50,24 +67,14 @@ body{
 .products .product:hover .img-square{
     transform: scale(1.1);
 }
-.products .product {
-    width: 24.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: left; /*nghi phạm*/
-    /* border: 1px solid blue; */
-}
-
 .products .product .img-square {
     object-fit: contain;
     height: 172px;
     width: 172px;
-    /* border: 1px solid black; */
     transition: transform 0.8s ease;
 }
 
 .products .product .img-cap {
-    /* text-align: center; */
     font-size: 18px;
     padding: 8px;
     font-weight: 600;
@@ -94,21 +101,20 @@ body{
     cursor: pointer;
 }
 .wrapper{
-    /* border: 1px solid rgb(230, 9, 9); */
     display: flex;
     position: relative;
     justify-content: center;
     height: fit-content;
 }
 .price {
-    /* border: 1px solid blue; */
     color: orange ;
     font-weight: bold;
     font-size: 18px;
 }
-/* Consolidated media queries */
+p, .entry-text{
+    font-size: 20px !important;
+}
 @media (max-width: 768px) {
-    /* 2-image layout tablet adjustments */
     .guides .guide {
         width: 100%;
         margin-bottom: 20px;
@@ -119,7 +125,6 @@ body{
         max-width: 100%;
     }
     
-    /* 4-image layout tablet adjustments */
     .products .product {
         width: 50%;
         margin-bottom: 20px;
@@ -132,10 +137,18 @@ body{
         width: 90%;
         max-width: 172px;
     }
+    .title-center{
+        font-size: 35px;
+    }
+    .title-left{
+        font-size: 30px ;
+    }
+    p, .entry-text{
+        font-size: 18px !important;
+    }
 }
 
 @media (max-width: 480px) {
-    /* 2-image and 4-image mobile adjustments */
     .guides .guide .img-square,
     .guides .guide .img-cap,
     .products .product .img-square,
@@ -143,12 +156,10 @@ body{
         width: 100%;
         max-width: 100%;
     }
-    
     .guides .guide .img-cap,
     .products .product .img-cap {
         font-size: 16px;
     }
-    
     .products .product {
         width: 100%;
     }
