@@ -45,7 +45,6 @@
                 <div>
                     <input type="text" class="form-control" placeholder="Email">
                     <small class="text-secondary error"></small>
-                    <div class="error"></div>
                 </div>
                 <div>
                     <input type="password" class="form-control" placeholder="Mật khẩu">
@@ -70,6 +69,16 @@
             event.preventDefault();
             validateInput();
         });
+        function setError(element, message){
+            const parent = element.parentElement;
+            const errorDisplay = parent.querySelector('.error');
+            errorDisplay.innerHTML = message;
+        }
+        function setSuccess(element){
+            const parent = element.parentElement;
+            const errorDisplay = parent.querySelector('.error');
+            errorDisplay.innerHTML = '';
+        }
         function validateInput(){
             const emailField = document.querySelector('input[placeholder="Email"]');
             const passwordField = document.querySelector('input[placeholder="Mật khẩu"]');
@@ -100,16 +109,6 @@
                     window.location.href = 'home.html'
                 },1000)
             }
-        }
-        function setError(element, message){
-            const parent = element.parentElement;
-            const errorDisplay = parent.querySelector('.error');
-            errorDisplay.innerHTML = message;
-        }
-        function setSuccess(element){
-            const parent = element.parentElement;
-            const errorDisplay = parent.querySelector('.error');
-            errorDisplay.innerHTML = '';
         }
     </script>
 </body>
