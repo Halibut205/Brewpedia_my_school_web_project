@@ -86,7 +86,7 @@
             const password = passwordField.value.trim();
             const rePassword = rePasswordField.value.trim()
             let isValid = true
-            const emailValidate = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+            const emailValidate = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ 
             setSuccess(emailField);
             setSuccess(passwordField);
             setSuccess(rePasswordField)
