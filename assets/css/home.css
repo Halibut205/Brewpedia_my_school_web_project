@@ -59,7 +59,6 @@ body {
 
 .banner-text a {
         text-decoration: none;
-        justify-content: center;
         color: inherit;
 }
 
@@ -83,7 +82,6 @@ body {
 }
 
 .main-content {
-    /* border: 3px solid red; */
     display: flex;
     gap: 30px;
     flex-direction: column;
@@ -522,5 +520,106 @@ body {
 
 .subscribe-form button:hover {
     background-color: #000;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        display: none;
+    }
+
+    .menu1 ul {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .menu1 li {
+        width: 150px;
+        height: 150px;
+    }
+
+    .menu1 img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .brief-introduction {
+        flex-direction: column;
+    }
+
+    .brief-introduction img {
+        width: 500px;
+        height: 300px;
+    }
+
+    .menu2-card li {
+        width: 100px;
+        height: 100px;
+    }
+
+    .menu3-item {
+        width: 45%;
+    }
+
+    .menu3 .row1{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menu3 .row2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .faq-item {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        display: none;
+    }
+
+    .menu1 li {
+        width: 120px;
+        height: 120px;
+    }
+
+    .menu1 img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .brief-introduction img {
+        width: 350px;
+        height: 250px;
+    }
+
+    .menu2-card li {
+        width: 80px;
+        height: 80px;
+    }
+
+    .menu3-item {
+        width: 100%;
+    }
+
+    .menu3 .row1{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menu3 .row2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+    }
+
+    .form-group {
+        flex: 1 1 100%;
+    }
 }
 
