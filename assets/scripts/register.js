@@ -48,16 +48,18 @@ function validateInput(){
     }
 }
 function setError(element, message){
-    const parent = element.parentElement
-    const errorDisplay = parent.querySelector('.error')
-    errorDisplay.innerHTML = message
-
+    const parent = element.parentElement;
+    const errorDisplay = parent.querySelector('.error');
+    errorDisplay.innerHTML = message;
+    element.style.border = '1px solid red';
 }
 function setSuccess(element){
-    const parent = element.parentElement
-    const errorDisplay = parent.querySelector('.error')
-    errorDisplay.innerHTML = ''
+    const parent = element.parentElement;
+    const errorDisplay = parent.querySelector('.error');
+    errorDisplay.innerHTML = '';
+    element.style.border = '1px solid green';
 }
+
 document.getElementById('togglePassword').addEventListener('click', function() {
     const passwordField = document.querySelector('input[type="password"]');
     const toggleIcon = document.querySelector('#togglePassword i');

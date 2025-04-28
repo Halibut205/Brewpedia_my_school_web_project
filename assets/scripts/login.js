@@ -21,11 +21,13 @@ function setError(element, message){
     const parent = element.parentElement;
     const errorDisplay = parent.querySelector('.error');
     errorDisplay.innerHTML = message;
+    element.style.border = '1px solid red';
 }
 function setSuccess(element){
     const parent = element.parentElement;
     const errorDisplay = parent.querySelector('.error');
     errorDisplay.innerHTML = '';
+    element.style.border = '1px solid green';
 }
 function validateInput(){
     const emailField = document.querySelector('input[placeholder="Email"]');
