@@ -23,7 +23,6 @@ body {
 }
 
 .banner{
-    /* border: 1px solid #000; */
     padding: 0;
     margin: 0;
     width: 100vw;
@@ -43,7 +42,6 @@ body {
 
 .banner-text {
     margin: 0 20% 0 50%;
-    /* border: 1px solid #000; */
     position: absolute;
     z-index: 1;
 }
@@ -98,13 +96,11 @@ body {
 }
 
 .menu1 a {
-    /* border: 1px solid #000; */
     text-decoration: none;
     color: inherit;
 }
 
 .menu1 ul{
-    /* border: 1px solid #000; */
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -120,7 +116,6 @@ body {
 }
 
 .menu1 span{
-    /* border: 1px solid #000; */
     position: absolute;
     z-index: 2;
     background-color: #FFF;
@@ -556,6 +551,7 @@ body {
         height: 100px;
     }
 
+
     .menu3-item {
         width: 45%;
     }
@@ -576,18 +572,31 @@ body {
 }
 
 @media (max-width: 480px) {
+    body{
+        font-size: 12px;
+    }
+
+    .main-content {
+        gap: 25px;
+    }
+
     .banner {
         display: none;
     }
 
     .menu1 li {
-        width: 120px;
-        height: 120px;
+        width: 135px;
+        height: 135px;
+    }
+
+    .menu1 span {
+        margin-top: 10px;
+        padding: 4px 6px;
     }
 
     .menu1 img {
-        width: 120px;
-        height: 120px;
+        width: 135px;
+        height: 135px;
     }
 
     .brief-introduction img {
@@ -595,9 +604,28 @@ body {
         height: 250px;
     }
 
+    .menu2-head-paragraph {
+        font-size: 25px;
+        text-align: center;
+    }
+
     .menu2-card li {
-        width: 80px;
-        height: 80px;
+        width: 300px; 
+        height: 300px; 
+        align-items: center;
+    }
+
+    .menu2-card li span {
+        padding: 8px 12px;
+    }
+
+    .menu2-card img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .what-is-kombucha p{
+        font-size: 20px;
     }
 
     .menu3-item {
