@@ -1,7 +1,96 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
-body{
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
     font-family: 'Sen', sans-serif;
 }
+
+body {
+    line-height: 1.6;
+    color: #333;
+    font-size: 16px;
+}
+
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 40px;
+}
+
+
+h1 {
+    color: #000000;
+    display: flex;
+    /* text-align: left; */
+    font-weight: bolder;
+    padding: 20px 0px;
+    /* margin: 0 0 16px; */
+}
+
+h2 {
+    color: #000000;
+    display: flex;
+    text-align: center;
+    /* justify-content: center; */
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+p {
+    margin: 16px 0;
+    font-size: 20px;
+}
+
+p.entry-text {
+    font-style: italic;
+    text-align: center;
+    color: rgba(0, 0, 0, .8);
+    font-weight: bold;
+    font-size: 20px !important;
+}
+
+.title-center {
+    justify-content: center;
+    line-height: 1.2;
+    font-size: 40px;
+}
+
+.title-left {
+    /* justify-content: left; */
+    line-height: 1.2;
+    font-size: 35px;
+}
+
+.highlight {
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.price {
+    color: orange;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    height: auto;
+}
+
+
 .guides {
     display: flex;
     flex-wrap: wrap;
@@ -16,8 +105,8 @@ body{
 }
 
 .guides .guide .img-square {
-    height: auto;
-    width: 90%;
+    /* height: auto;
+    width: 90%; */
     max-width: 360px;
     object-fit: contain;
 }
@@ -31,38 +120,27 @@ body{
     padding: 8px;
 }
 
-.title-center {
-    justify-content: center;
-    line-height: 1.2;
-    font-size: 40px;
-    text-align: center;
-}
-
-.title-left {
-    justify-content: left;
-    line-height: 1.2;
-    font-size: 35px;
-
-}
-
 .products {
     display: flex;
     flex-wrap: wrap;
-    
 }
+
 .products .product {
     width: 25%;
     display: flex;
     flex-direction: column;
     align-items: left;
 }
-.products .product:hover{
+
+.products .product:hover {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
-.products .product:hover .img-square{
+
+.products .product:hover .img-square {
     transform: scale(1.1);
 }
+
 .products .product .img-square {
     object-fit: contain;
     height: 172px;
@@ -76,48 +154,47 @@ body{
     font-weight: 600;
     color: rgb(51, 51, 51);
 }
-.wrapper{
-    overflow: hidden;
+
+.product-name {
+    cursor: pointer;
 }
-.addToCart{
+
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.addToCart {
     background-color: orange;
     height: 30px;
     width: 100%;
     border: 1px solid orange;
     border-radius: 2px;
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     text-align: center;
-    opacity: 0;
-    transition: opacity 0.4s ease, background-color 1s ease;
+    transition: transform 0.5s ease, background-color 1s ease;
     align-content: center;
+    transform: translateY(100%);
 }
-.addToCart.active{
-    opacity: 1;
+
+.addToCart.active {
     cursor: pointer;
+    transform: translateY(0);
 }
-.product-name{
-    cursor: pointer;
-}
-.wrapper{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    height: fit-content;
-}
-.price {
-    color: orange ;
-    font-weight: bold;
-    font-size: 18px;
-}
-p, .entry-text{
-    font-size: 20px !important;
-}
+
 @media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    
     .guides .guide {
         width: 100%;
         margin-bottom: 20px;
     }
+    
     .guides .guide .img-square,
     .guides .guide .img-cap {
         width: 90%;
@@ -128,26 +205,36 @@ p, .entry-text{
         width: 50%;
         margin-bottom: 20px;
     }
+    
     .products .product .img-square {
         width: 90%;
         max-width: 172px;
     }
+    
     .products .product .img-cap {
         width: 90%;
         max-width: 172px;
     }
-    .title-center{
+    
+    .title-center {
         font-size: 35px;
     }
-    .title-left{
-        font-size: 30px ;
+    
+    .title-left {
+        font-size: 30px;
     }
-    p, .entry-text{
+    
+    p, .entry-text {
         font-size: 18px !important;
     }
 }
 
 @media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+    
     .guides .guide .img-square,
     .guides .guide .img-cap,
     .products .product .img-square,
@@ -155,10 +242,12 @@ p, .entry-text{
         width: 100%;
         max-width: 100%;
     }
+    
     .guides .guide .img-cap,
     .products .product .img-cap {
         font-size: 16px;
     }
+    
     .products .product {
         width: 100%;
     }
