@@ -10,4 +10,22 @@ function scrollToBanner() {
     }
 }
 
-window.addEventListener("DOMContentLoaded", scrollToBanner);
+function waitForHeaderLoad() {
+    const header = document.getElementById("header");
+
+    if (header) {
+        const observer = new MutationObserver(() => {
+            if (header.innerHTML.trim() !== "") {
+                console.log("#header đã được tải vào DOM!");
+                scrollToBanner();
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(header, { childList: true, subtree: true });
+    } else {
+        console.error("Không tìm thấy phần tử #header trong DOM.");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", waitForHeaderLoad);
