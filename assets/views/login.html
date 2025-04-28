@@ -49,6 +49,9 @@
                 <div>
                     <input type="password" class="form-control" placeholder="Mật khẩu">
                     <small class="text-secondary error"></small>
+                    <span id="togglePassword">
+                        <i></i>
+                    </span>
                 </div>
                 <button type="submit" class="btn">Đăng nhập</button><br>
             </form><br>
@@ -65,6 +68,22 @@
     <div id="footer"></div>
     <script src="../scripts/linkFooter.js"></script>
     <script>
+
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordField = document.querySelector('input[type="password"]');
+            const toggleIcon = document.querySelector('#togglePassword i');
+            
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordField.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        });
+        
         document.querySelector('form').addEventListener('submit', function(event){
             event.preventDefault();
             validateInput();
