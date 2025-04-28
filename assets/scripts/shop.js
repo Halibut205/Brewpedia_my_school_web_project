@@ -13,7 +13,6 @@ for (var i = 0; i < wrappers.length; i++) {
     var btn = wrappers[i].querySelector('.addToCart');
     if(btn) {
         btn.addEventListener('click', function(event){
-            event.stopPropagation();
             this.innerHTML = 'Đã thêm!';
             this.style.backgroundColor = 'green';
             this.style.border = '1px solid green'
