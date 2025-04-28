@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -65,11 +64,11 @@ body {
     margin: auto;
 }
 .menu1 {
-    width: 100%;
+    /* width: 100%; */
     margin-top: 20px;
 }
 .menu1 a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: inherit;
 }
 .menu1 ul{
@@ -78,9 +77,10 @@ body {
     gap: 16px;
 }
 .menu1 li {
-    position: relative;
+    /* position: relative; */
     width: 250px; 
     height: 250px; 
+    list-style: none;
     overflow: hidden; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
@@ -103,7 +103,7 @@ body {
 }
 .brief-introduction {
     display: flex;
-    position: relative;
+    /* position: relative; */
     align-items: center;
     justify-content: center;
     margin: 20px 0;
@@ -120,7 +120,7 @@ body {
     flex-direction: column;
     gap: 10px;
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 40px;
     color: #555;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }   
@@ -174,24 +174,21 @@ body {
     color: #000000;
 }
 .menu2-card ul{
-    /* border: 1px solid #000; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    list-style-type: none;
+    list-style: none;
     gap: 10px;
     padding: 0;
     margin: 0;
 }
 .menu2-card li {
-    position: relative;
     width: 160px; 
     height: 160px; 
     overflow: hidden; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 .menu2-card li span {
-    /* border: 1px solid #000; */
     position: absolute;
     z-index: 2;
     background-color: #FFF;
