@@ -26,7 +26,6 @@ body {
 .banner-text {
     margin: 0 20% 0 50%;
     position: absolute;
-    z-index: 1;
 }
 .banner-text img {
     width: 700px;
@@ -310,12 +309,10 @@ body {
     text-align: center;
 }
 
-
 .menu3-item img {
     width: 100%;
     object-fit: cover;
 }
-
 
 
 
@@ -379,7 +376,6 @@ body {
 
 
 
-
 .subscribe-section {
     background-image: url('../images/pattern/pattern-dashes.png');
     color: #000;
@@ -403,7 +399,9 @@ body {
     gap: 20px;
 }
 .form-group {
-    flex: 1 1 calc(50% - 20px); /* Chia đều 2 ô nhập liệu */
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    flex-basis: calc(50% - 20px);
     display: flex;
     flex-direction: column;
 }
@@ -438,6 +436,8 @@ body {
 .subscribe-form button:hover {
     background-color: #000;
 }
+
+
 
 @media (max-width: 1000px) {
 
