@@ -59,16 +59,12 @@ function initializeStickyHeader() {
     window.addEventListener('scroll', function () {
         const comprehensiveHeight = comprehensive.offsetHeight;
         if (window.scrollY >= comprehensiveHeight) {
-            if (!header.classList.contains('fixed')) {
-                header.classList.add('fixed');
-                placeholder.style.height = header.offsetHeight + 'px';
-                placeholder.style.display = 'block';
-            }
+            header.classList.add('fixed');
+            placeholder.style.height = header.offsetHeight + 'px';
+            placeholder.style.display = 'block';
         } else {
-            if (header.classList.contains('fixed')) {
-                header.classList.remove('fixed');
-                placeholder.style.display = 'none';
-            }
+            header.classList.remove('fixed');
+            placeholder.style.display = 'none';
         }
     });
 }
