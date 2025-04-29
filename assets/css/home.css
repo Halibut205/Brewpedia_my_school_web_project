@@ -239,7 +239,6 @@ body {
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 5px;
-    margin: 0;
     padding: 0 20px;
     color: #fff;
     text-shadow: 
@@ -258,8 +257,6 @@ body {
     border: none;
     background-color: #000;
     position: absolute;
-    top: 50%;
-    left: 0;
     z-index: 0;
 }
 

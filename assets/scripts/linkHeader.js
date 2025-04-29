@@ -19,9 +19,6 @@ function loadHeaderCSS() {
     document.head.appendChild(link);
 }
 
-// Gọi hàm loadHeader để khởi chạy
-loadHeader();
-
 // Hàm gắn sự kiện cho popup
 function initializePopupEvents() {
     const openButtonMobile = document.getElementById("open-modal-mobile");
@@ -74,3 +71,6 @@ function toggleMenu() {
     const rightHeader = document.querySelector('.right-header');
     rightHeader.classList.toggle('active');
 }
+
+// Gọi hàm khởi chạy
+loadHeader();

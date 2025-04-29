@@ -197,7 +197,6 @@ img {
     .guides .guide .img-square,
     .guides .guide .img-cap {
         width: 90%;
-        max-width: 100%;
     }
     
     .products .product {
@@ -207,12 +206,10 @@ img {
     
     .products .product .img-square {
         width: 90%;
-        max-width: 172px;
     }
     
     .products .product .img-cap {
         width: 90%;
-        max-width: 172px;
     }
     
     .title-center {
@@ -239,7 +236,6 @@ img {
     .products .product .img-square,
     .products .product .img-cap {
         width: 100%;
-        max-width: 100%;
     }
     
     .guides .guide .img-cap,

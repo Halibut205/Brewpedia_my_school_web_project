@@ -5,8 +5,6 @@ function loadFooter() {
         .then((data) => {
             document.getElementById("footer").innerHTML = data;
             loadFooterCSS();
-            initializePopupEvents();
-            initializeStickyfooter();
         })
         .catch((error) => console.error("Lỗi load footer:", error));
 }
